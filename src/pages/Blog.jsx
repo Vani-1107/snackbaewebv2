@@ -16,6 +16,16 @@ import Footer from '../component/Footer';
 
 const Blog = () => {
 
+  // Function to handle scrolling to the referenced element
+  const scrollToElement = () => {
+    const element = document.getElementById('blogs');
+
+    // Scroll to the element if found
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+
   return (
     <div className='w-full h-fit '>
       {/* hero section */}
@@ -24,7 +34,7 @@ const Blog = () => {
         <div className='w-full sm:w-[80%] lg:w-[55%] h-fit relative top-[50%] translate-y-[-50%]  pl-[1rem] md:ml-[3rem] '>
           <p className='w-full font-Sen text-[#FFFFFF] font-[700] text-[3.2rem] leading-[3.6rem] md:text-[3.6rem] md:leading-[4.8rem]'>Welcome to the Snackbae Blogs</p>
           <p className='w-[90%] font-inter text-[.9rem] text-[#e4e5ea] font-[400] leading-[1.4rem] mt-[.5rem]'>Discover insightful articles, actionable tips, and expert advice to help eateries and retailers thrive in today's competitive landscape. Explore topics such as customer retention, engagement strategies, marketing tactics, and much more.</p>
-          <button className='bg-[#FFD628] px-[1.8rem] py-[.5rem] rounded-md  font-Sen font-[700] text-[1.1rem] leading-[1.8rem] mt-[1rem] flex items-center gap-[.2rem]'>Read blogs<FaAngleRight /></button>
+          <button onClick={scrollToElement} className='bg-[#FFD628] px-[1.8rem] py-[.5rem] rounded-md  font-Sen font-[700] text-[1.1rem] leading-[1.8rem] mt-[1rem] flex items-center gap-[.2rem]'>Read blogs<FaAngleRight /></button>
         </div>
       </div>
 
@@ -37,7 +47,7 @@ const Blog = () => {
       </div>
 
       {/* allblogs */}
-      <div className='w-full h-fit'>
+      <div id='blogs' className='w-full h-fit'>
         {blogs.map((blog) => (
           <div className='w-[90%] mx-auto h-fit p-[2rem] flex md:flex-row flex-col items-center md:items-start justify-center gap-[2rem] ' key={blog.id}>
             <Link to={`/blogDetail/${blog.id}`}>

@@ -57,9 +57,9 @@ function Footer() {
                         <div className='flex sm:justify-around justify-between w-full lg:w-[70%] gap-[.5rem]'>
                             <div className='flex flex-col gap-[.5rem]'>
                                 <p className='text-[#8b7430]'>Services</p>
-                                <Link to="/"><div className='text-[.7rem] sm:text-[.9rem]'>Interactive Digital Menu</div></Link>
-                                <Link to="/"><div className='text-[.7rem] sm:text-[.9rem]'>Comisionless Payments</div></Link>
-                                <Link to="/"><div className='text-[.7rem] sm:text-[.9rem]'>Recommend System</div></Link>
+                                <Link onClick={scrollSmooth} to="/joinAsPartner"><div className='text-[.7rem] sm:text-[.9rem]'>Interactive Digital Menu</div></Link>
+                                <Link onClick={scrollSmooth} to="/joinAsPartner"><div className='text-[.7rem] sm:text-[.9rem]'>Comisionless Payments</div></Link>
+                                <Link onClick={scrollSmooth} to="/joinAsPartner"><div className='text-[.7rem] sm:text-[.9rem]'>Recommend System</div></Link>
                             </div>
                             <div className='flex flex-col gap-[.5rem]'>
                                 <p className='text-[#8b7430]'>About</p>

@@ -160,8 +160,8 @@ const LandingPage = () => {
         <div className='w-[90%] h-fit mx-auto pt-[2rem] relative mb-[1rem]'>
           <div className='w-full sm:w-[40%] h-fit z-[100] relative '>
             <img src={doubleQuotes} alt='doublequotes' className=' absolute z-[-1]   ' />
-            <p className='w-full text-[2rem] sm:text-[3rem] z-[101] font-[700] font-inter leading-[3rem] lsm:eading-[4rem] text-[#ECFEFF] pl-[3rem] pt-[3rem]'>Real Opinion from Real Customers</p>
-            <p className='text-[.9rem] sm:text-[1rem] z-[101] font-[400] font-inter sm:leading-[2.5rem] leading-[1.4rem] text-[#E5E7EB] pl-[3rem] '>Unleash your inner food critic.</p>
+            <p className='w-full text-[2rem] sm:text-[3rem] z-[101] font-[700] font-inter leading-[3rem] lsm:eading-[4rem] text-[#ECFEFF] pl-[5rem] pt-[4rem]'>Real Opinion from Real Customers</p>
+            <p className='text-[.9rem] sm:text-[1rem] z-[101] font-[400] font-inter sm:leading-[2.5rem] leading-[1.4rem] text-[#E5E7EB] pl-[5rem] '>Unleash your inner food critic.</p>
           </div>
         </div>
 
@@ -253,7 +253,7 @@ const LandingPage = () => {
           <p className='bg-white text-[#004AAD] px-[1.5rem] py-[.5rem] inline-block  rounded-3xl font-Roboto font-[600] mb-[1rem]'>For Partners</p>
           <p className=' font-inter font-[700] text-[2.4rem] md:text-[3rem] leading-[3.2rem] md:leading-[4.5rem] tracking-tighter text-[#E5E7EB]'>Elevate Your Business: Revolutionize Customer Relations with SnackBae!</p>
           <p className=' font-inter font-[400] md:text-[1.1rem] leading-[1.6rem] tracking-tighter text-[#D1D5DB]'>SnackBae is here to transform the way you engage with your customers and drive lasting relationships.</p>
-          <Link onClick={scrollSmooth} to='/joinAsPartner' className=' mt-[1rem] text-white bg-[#004AAD] px-[1.5rem] py-[.5rem] inline-block  rounded-3xl font-Roboto font-[600] border-2 border-white'>For Partners</Link>
+          <Link onClick={scrollSmooth} to='/joinAsPartner' className=' mt-[1rem] text-white bg-[#004AAD] px-[1.5rem] py-[.5rem] inline-block  rounded-3xl font-Roboto font-[600] border-2 border-white'>Learn More</Link>
         </div>
         {/* large-screen */}
         <img src={mobileImage} alt='mobileImage' className='md:block hidden w-[45%] lg:h-full aspect-auto' />
