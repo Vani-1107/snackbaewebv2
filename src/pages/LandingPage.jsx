@@ -4,7 +4,7 @@ import '@dotlottie/player-component';
 import './LandingPage.css';
 
 //components
-import  Footer from '../component/Footer'
+import Footer from '../component/Footer'
 
 //image
 import bgHero from '../assets/Backgroundhero.png';
@@ -50,6 +50,13 @@ const LandingPage = () => {
     // Now you can use demoData object for further processing
   };
 
+  //scroll-smooth
+  function scrollSmooth() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 
   return (
     <div className='w-full h-fit '>
@@ -111,10 +118,10 @@ const LandingPage = () => {
 
         {/* content */}
         <div className='w-full sm:w-[90%] mx-auto h-fit min-h-[calc(100vh-70px)] relative flex sm:flex-row flex-col justify-evenly sm:justify-between items-center'>
-          <div className='flex flex-col w-[90%] mx-auto md:w-[50%] h-full gap-[1rem] sm:gap-[2rem] justify-center'>
+          <div className='flex flex-col w-[90%] mx-auto md:w-[70%] h-full gap-[1rem] sm:gap-[2rem] justify-center'>
             <p className='text-[#E5E7EB] font-[700] text-[3.2rem] md:text-[3rem] lg:text-[3.8rem] leading-[3.6rem] md:leading-[4rem] lg:leading-[4.5rem]'>It’s not just food,<br className='lg:block hidden' />it’s an <span className='text-[#FFD628]'>Experience</span>
             </p>
-            <p className='font-[400] text-[.8rem] sm:text-[1.1rem] text-[#D1D5DB]'>Our QR based interactive digital menu makes ordering a breeze, ensuring your patrons spend less time waiting and more time in indulging in delicious dishes.</p>
+            <p className='md:w-[70%] font-[400] text-[.8rem] sm:text-[1.1rem] text-[#D1D5DB]'>Our QR based interactive digital menu makes ordering a breeze, ensuring your patrons spend less time waiting and more time in indulging in delicious dishes.</p>
             <div className='flex  gap-[2rem] sm:justify-start justify-center items-center'>
               <Link to='/register' className='bg-[#FFD628] px-[1.5rem] py-[.5rem] rounded-3xl font-[500]'>Get Started</Link>
               <Link
@@ -126,12 +133,25 @@ const LandingPage = () => {
           </div>
           {/* gif */}
           {/* <img src={gifhero} alt='gif-hero' className='w-[80%] md:w-[40%] aspect-auto' /> */}
-          {/* <dotlottie-player
-            src="https://lottie.host/28c3766f-e323-4fbf-b3eb-ee88d5b17317/450ZeXA8KZ.json"
-            autoplay
-            loop
-            style={{ width: "400px", height: "400px" }}
-          /> */}
+          {/* large-screeen */}
+          <div className='sm:block hidden'>
+            <dotlottie-player
+              src="https://lottie.host/28c3766f-e323-4fbf-b3eb-ee88d5b17317/450ZeXA8KZ.json"
+              autoplay
+              loop
+              style={{ width: "400px", height: "400px" }}
+            />
+          </div>
+          {/* small-screen */}
+          <div className='block sm:hidden'>
+            <dotlottie-player
+              src="https://lottie.host/28c3766f-e323-4fbf-b3eb-ee88d5b17317/450ZeXA8KZ.json"
+              autoplay
+              loop
+              style={{ width: "280px", height: "280px" }}
+            />
+          </div>
+
         </div>
       </div>
 
@@ -197,7 +217,7 @@ const LandingPage = () => {
       </div>
 
       {/* snackbae Feature */}
-      <div  id='elementId' className='w-full h-fit bg-[#101010] md:p-[2rem]'>
+      <div id='elementId' className='w-full h-fit bg-[#101010] md:p-[2rem]'>
 
         <p className='bg-white text-[#004AAD] px-[1.5rem] py-[.5rem] inline-block mt-[3rem] ml-[3rem] rounded-3xl font-Roboto font-[600]'>For Customer</p>
 
@@ -233,19 +253,19 @@ const LandingPage = () => {
           <p className='bg-white text-[#004AAD] px-[1.5rem] py-[.5rem] inline-block  rounded-3xl font-Roboto font-[600] mb-[1rem]'>For Partners</p>
           <p className=' font-inter font-[700] text-[2.4rem] md:text-[3rem] leading-[3.2rem] md:leading-[4.5rem] tracking-tighter text-[#E5E7EB]'>Elevate Your Business: Revolutionize Customer Relations with SnackBae!</p>
           <p className=' font-inter font-[400] md:text-[1.1rem] leading-[1.6rem] tracking-tighter text-[#D1D5DB]'>SnackBae is here to transform the way you engage with your customers and drive lasting relationships.</p>
-          <Link to='/joinAsPartner' className=' mt-[1rem] text-white bg-[#004AAD] px-[1.5rem] py-[.5rem] inline-block  rounded-3xl font-Roboto font-[600] border-2 border-white'>For Partners</Link>
+          <Link onClick={scrollSmooth} to='/joinAsPartner' className=' mt-[1rem] text-white bg-[#004AAD] px-[1.5rem] py-[.5rem] inline-block  rounded-3xl font-Roboto font-[600] border-2 border-white'>For Partners</Link>
         </div>
         {/* large-screen */}
         <img src={mobileImage} alt='mobileImage' className='md:block hidden w-[45%] lg:h-full aspect-auto' />
         {/* small-screen */}
         <div className='md:hidden w-full h-[400px] overflow-hidden flex justify-center '>
-        <img src={PhoneMockup2Image} alt='PhoneMockup2Image' className=' h-full aspect-auto' />
-        
+          <img src={PhoneMockup2Image} alt='PhoneMockup2Image' className=' h-full aspect-auto' />
+
         </div>
       </div>
 
       {/* footer */}
-      <Footer/>
+      <Footer />
     </div>
   )
 }
