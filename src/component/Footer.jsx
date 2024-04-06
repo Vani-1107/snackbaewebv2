@@ -16,6 +16,14 @@ function Footer() {
         console.log(email);
         setEmail("");
     }
+    
+      //scroll-smooth
+    function scrollSmooth(){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+    }
 
     return (
         <div>
@@ -55,23 +63,23 @@ function Footer() {
                             </div>
                             <div className='flex flex-col gap-[.5rem]'>
                                 <p className='text-[#8b7430]'>About</p>
-                                <Link to="/"><div className='text-[.7rem] sm:text-[.9rem]'>Home</div></Link>
-                                <Link to="/blogs"><div className='text-[.7rem] sm:text-[.9rem]'>Blogs</div></Link>
-                                <Link to="/aboutus" ><div className='text-[.7rem] sm:text-[.9rem]'>About Us</div></Link>
+                                <Link onClick={scrollSmooth} to="/"><div className='text-[.7rem] sm:text-[.9rem]'>Home</div></Link>
+                                <Link onClick={scrollSmooth} to="/blogs"><div className='text-[.7rem] sm:text-[.9rem]'>Blogs</div></Link>
+                                <Link onClick={scrollSmooth} to="/aboutus" ><div className='text-[.7rem] sm:text-[.9rem]'>About Us</div></Link>
                             </div>
                             <div className='flex flex-col gap-[.5rem]'>
                                 <p className='text-[#8b7430] text-nowrap'>For Restaurants</p>
-                                <Link to="/joinpartner"><div className='text-[.7rem] sm:text-[.9rem]'>Join as Partner</div></Link>
-                                <Link to="/login"><div className='text-[.7rem] sm:text-[.9rem]'>Partner Login</div></Link>
+                                <Link onClick={scrollSmooth} to="/joinpartner"><div className='text-[.7rem] sm:text-[.9rem]'>Join as Partner</div></Link>
+                                <Link onClick={scrollSmooth} to="/login"><div className='text-[.7rem] sm:text-[.9rem]'>Partner Login</div></Link>
                             </div>
                         </div>
                     </div>
 
                     <div className='w-full flex md:flex-row flex-col justify-between items-center '>
                         <div className='flex gap-[1rem] my-[1rem] text-[.9rem]'>
-                            <Link to="/termsCondition" className='text-[.7rem] sm:text-[.9rem]'>Terms & Conditions</Link>
-                            <Link to="/privacyPolicy" className='text-[.7rem] sm:text-[.9rem]'>Privacy Policy</Link>
-                            <Link to="/contact" className='text-[.7rem] sm:text-[.9rem]'>Contact Us</Link>
+                            <Link onClick={scrollSmooth} to="/termsCondition" className='text-[.7rem] sm:text-[.9rem]'>Terms & Conditions</Link>
+                            <Link  onClick={scrollSmooth} to="/privacyPolicy" className='text-[.7rem] sm:text-[.9rem]'>Privacy Policy</Link>
+                            <Link onClick={scrollSmooth} to="/contact" className='text-[.7rem] sm:text-[.9rem]'>Contact Us</Link>
                         </div>
                         <div className='flex gap-[1rem] my-[1rem]'>
                             <Link to="/"  ><img src={fb} ></img></Link>
