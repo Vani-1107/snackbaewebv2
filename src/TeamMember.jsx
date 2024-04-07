@@ -24,9 +24,9 @@ const teamMembers = [
       linkedIn : 'https://www.linkedin.com/in/vani03/',
     },
     {
-      name: "Rohit Kumar Gupta",
+      name: "Rohit Gupta",
       position: "Frontend Dev",
-      image: "https://media.licdn.com/dms/image/D4D03AQGyoWEDGxC5cA/profile-displayphoto-shrink_400_400/0/1711640609436?e=1717632000&v=beta&t=DjvFR7B_u2FL1bRtXp0m7mUyOXItpVd53vJ03MKwuN0",
+      image: "https://media.licdn.com/dms/image/D4D03AQG6VxMYgOxUKQ/profile-displayphoto-shrink_800_800/0/1712506715365?e=1718236800&v=beta&t=tYOdOmW0_GFQmlfVwzEN7tBwNgus6W09YXYAYunDzFw",
       linkedIn :'www.linkedin.com/in/rohit-gupta-40a631232',
     },
     {
