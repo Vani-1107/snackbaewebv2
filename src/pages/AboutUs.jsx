@@ -69,8 +69,8 @@ const AboutUs = () => {
               <Link target='_blank' to={member.linkedIn}>
                 <div key={index} className="text-center w-[240px] h-fit">
                   <img src={member.image} alt={member.name} className='w-full aspect-square' />
-                  <h2 className='text-[2rem] font-[600]'>{member.name}</h2>
-                  <p className='text-[1.2rem] text-nowrap'>{member.position}</p>
+                  <h2 className='text-[1.8rem] font-[500] leading-[2rem] mt-[.5rem] '>{member.name}</h2>
+                  <p className='text-[1.1rem] text-nowrap text-[#004AAD]'>{member.position}</p>
                 </div>
               </Link>
             ))}
