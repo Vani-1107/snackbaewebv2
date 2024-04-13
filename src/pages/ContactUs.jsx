@@ -3,8 +3,6 @@ import React from 'react'
 //component
 import Footer from '../component/Footer'
 
-//image
-// import contactGirl from "../assets/contact girl.png"
 
 
 const ContactUs = () => {
