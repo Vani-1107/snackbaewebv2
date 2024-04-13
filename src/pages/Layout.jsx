@@ -1,6 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
 
-
 //component
 import Navbar from "../component/Navbar";
 
